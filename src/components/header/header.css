@@ -17,6 +17,11 @@ header {
     font-size: 10rem;
 }
 
+.letter {
+    display: block;
+    margin-bottom: 1em;
+}
+  
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.8s ease-in 0.8s forwards;
