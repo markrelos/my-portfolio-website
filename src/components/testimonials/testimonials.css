@@ -46,9 +46,15 @@
 }
 
 @media screen and (max-width: 1024px) {
+    #testimonials {
+        height: 100vh;
+    }
     .container.testimonials__container {
         width: 60%;
     }
+    #testimonials span {
+        font-size: 3rem; 
+     }
 
 }
 
@@ -58,6 +64,9 @@
     .container.testimonials__container {
         width: var(--container-width-sm);
     }
+    #testimonials span {
+        font-size: 2rem; 
+     }
 
     .client__review {
         width: var(--container-width-sm);

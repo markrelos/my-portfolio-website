@@ -8,7 +8,7 @@ import IMG5 from '../../assets/portfolio5.png'
 import IMG6 from '../../assets/portfolio6.jpg'
 import TextSpan3 from './TextSpan3'
 
-const sentence = "My Works".split("");
+const sentence = "Work".split("");
 const data = [
   {
     id: 1,

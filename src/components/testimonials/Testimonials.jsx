@@ -37,7 +37,7 @@ const data = [
       review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem corporis autem mollitia, molestias quos laborum. Quia, libero aperiam optio eveniet odio, incidunt, voluptas omnis suscipit at repellat et dignissimos soluta?',
     }
 ]
-const sentence = "Client's Testimonials".split("");
+const sentence = "Testimonials".split("");
 const Testimonials = () => {
   return (
     <section id= 'testimonials'>    

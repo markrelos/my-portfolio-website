@@ -71,6 +71,10 @@ input, textarea {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    #contact span {
+        font-size: 3rem; 
+     }
+
 }
 
 /* =================== MEDIA QUERIES (SMALL DEVICES) =================== */
@@ -79,4 +83,7 @@ input, textarea {
     .container.contact__container {
         width: var(--container-width-sm);
     }
+    #contact span {
+        font-size: 2rem; 
+     }
 }

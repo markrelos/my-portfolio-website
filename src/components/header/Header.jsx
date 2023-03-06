@@ -6,21 +6,23 @@ import HeaderSocials from './HeaderSocials'
 import { motion } from "framer-motion"
 import TextSpan from './TextSpan'
 
-const sentence = "Hi, I'm Mark Relos".split("");
+const sentence = ["Hi,", "I'm", "Mark Relos"];
 const Header = () => {
 
   return (
     <header className="fade-in">
       <div className="container header__container">
-      <div>
-        {sentence.map((letter, index) => {
-          return(
-            <TextSpan key={index}>
-              {letter === " "? "\u00A0" : letter}
-            </TextSpan>
-          )
-        })}
-      </div>
+      <div className="letter-container">
+          {sentence.map((word, wordIndex) => (
+            <div key={wordIndex}>
+              {word.split("").map((letter, letterIndex) => (
+                <TextSpan key={letterIndex}>
+                  {letter === ' ' ? '\u00A0' : letter}
+                </TextSpan>
+              ))}
+            </div>
+          ))}
+        </div>
       <p className="text_light"> Frontend / Mobile Game Developer </p>
         {/*<h5>Hello I'm</h5>
         <h1>Mark Relos</h1>

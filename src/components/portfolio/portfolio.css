@@ -48,6 +48,9 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
     }
+    #portfolio span {
+        font-size: 3rem; 
+     }
 }
 
 /* =================== MEDIA QUERIES (SMALL DEVICES) =================== */
@@ -57,4 +60,7 @@
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    #portfolio span {
+        font-size: 2rem; 
+     }
 }

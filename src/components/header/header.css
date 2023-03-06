@@ -10,11 +10,19 @@ header {
     position: relative;
 }
 /* ============= Span ========== */
+.letter-container{
+    display: inline-block;
+    text-align: left;
+    width: max-content;
+    height: max-content;
+    padding-bottom: 0;
+}
 
 .text-span {
     display: inline-block;
-    font-size: 10rem;
+    font-size: 10vh;
 }
+
 .text_light {
     font-size: 1rem;
     color: #7b90a5;
@@ -125,12 +133,15 @@ header {
 
 @media screen and (max-width: 1024px) {
    header {
-    height: 80vh;
+    height: 100vh;
+    padding-top: 10rem;
    }
-   .text-span {
-    display: inline-block;
-    font-size: 5rem;
-    }
+   .header__container{
+    padding-top: 10rem;
+   }
+   .text-span{
+    font-size: 8vh;
+   }
 } 
 
 /* =================== MEDIA QUERIES (SMALLDEVICES) =================== */
@@ -138,12 +149,11 @@ header {
 @media screen and (max-width: 600px) {
     header {
         height: 140vh;
-        width: 90vh;
+        padding-top: 0;
        }
-    .text-span {
-        display: inline-block;
-        font-size: 3rem;
-    }
+       .header__container{
+        padding-top: 10rem;
+       }
     .header__socials, .scroll__down {
         display: none;
        }
