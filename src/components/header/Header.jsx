@@ -21,7 +21,7 @@ const Header = () => {
           )
         })}
       </div>
-      <p className="text-light"> Frontend / Mobile Game Developer </p>
+      <p className="text_light"> Frontend / Mobile Game Developer </p>
         {/*<h5>Hello I'm</h5>
         <h1>Mark Relos</h1>
         <h2 className="text-light">Fullstack Developer</h2>*/}

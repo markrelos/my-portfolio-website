@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    padding-top: 7rem;
+    padding-top: 15rem;
     overflow: hidden;
 }
 
@@ -8,7 +8,6 @@ header {
     text-align: center;
     height: 100%;
     position: relative;
-    padding-top: 15rem;
 }
 /* ============= Span ========== */
 
@@ -16,10 +15,9 @@ header {
     display: inline-block;
     font-size: 10rem;
 }
-
-.letter {
-    display: block;
-    margin-bottom: 1em;
+.text_light {
+    font-size: 1rem;
+    color: #7b90a5;
 }
   
 .fade-in {
@@ -127,18 +125,26 @@ header {
 
 @media screen and (max-width: 1024px) {
    header {
-    height: 68vh;
+    height: 80vh;
    }
+   .text-span {
+    display: inline-block;
+    font-size: 5rem;
+    }
 } 
 
 /* =================== MEDIA QUERIES (SMALLDEVICES) =================== */
 
 @media screen and (max-width: 600px) {
     header {
-        height: 100vh;
+        height: 140vh;
+        width: 90vh;
        }
-
-       .header__socials, .scroll__down {
+    .text-span {
+        display: inline-block;
+        font-size: 3rem;
+    }
+    .header__socials, .scroll__down {
         display: none;
        }
 }
