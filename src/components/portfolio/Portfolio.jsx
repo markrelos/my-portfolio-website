@@ -50,7 +50,7 @@ const Portfolio = () => {
         const sectionHeight = section.offsetHeight;
 
         if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
-          const element = section.querySelector('.portfolio__item');
+          const element = section.querySelector('.pWrapper');
           setIsVisible(!!element);
         }
       });
@@ -62,8 +62,6 @@ const Portfolio = () => {
 
   return (
     <section id= 'portfolio'>
-      {/*<h5>My Recent Work</h5>
-      <h2>Portfolio</h2>*/}
       <div id='port__header'>
         {sentence.map((letter, index) => {
           return(
@@ -78,11 +76,12 @@ const Portfolio = () => {
        {
         data.map(({id, image, title, github, demo}, index) => {
           return (
-            <motion.article key={id} className='portfolio__item'
-                initial={{ scale: 0 }}
-                animate={isVisible ? {scale: 1 } : { scale: 0 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 20, delay: index * 0.2}}
+            <motion.div className='pWrapper'
+              initial={{ scale: 0 }}
+              animate={isVisible ? {scale: 1 } : { scale: 0 }}
+              transition={{ type: 'spring', stiffness: 260, damping: 20, delay: index * 0.2}}
             >
+            <article key={id} className='portfolio__item'>
             <div className="portfolio__item-image">
               <img src={image} alt={title} />
             </div>
@@ -91,7 +90,8 @@ const Portfolio = () => {
                 <a href={github} className='btn' target='_blank'>Github</a>
                 <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
               </div>
-          </motion.article>
+          </article>
+          </motion.div>
           )
         })
        }
