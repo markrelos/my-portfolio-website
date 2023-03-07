@@ -24,6 +24,8 @@ const Nav = () => {
 
         if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
           currentSection = '#' + section.id;
+          const element = section.querySelector('.animate');
+          setActiveNav(!!element);
         } else if (currentPosition < sections[0].offsetTop - 200) {
           currentSection = null; // At the top of the page
         } else if (index === sections.length - 1 && currentPosition >= sectionTop + sectionHeight) {
