@@ -47,6 +47,7 @@ const Experience = () => {
             animate={isVisible ? {scale: 1 } : { scale: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20}}
         >
+          <div>
           <h3>Frontend Development</h3>
           <div className="experience__content">
             <article className='experience__details'>
@@ -92,6 +93,7 @@ const Experience = () => {
               </div>
             </article>
           </div>
+          </div>
         </motion.div>
           {/* END OF FRONTEND */}
         <motion.div className="animate"
@@ -99,6 +101,7 @@ const Experience = () => {
             animate={isVisible ? {scale: 1 } : { scale: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}
         >
+          <div>
         <h3>Backend Development</h3>
           <div className="experience__content">
             <article className='experience__details'>
@@ -136,6 +139,7 @@ const Experience = () => {
               <small className='text-light'>Experienced</small>
              </div>
             </article>
+          </div>
           </div>
         </motion.div>
       </div>
