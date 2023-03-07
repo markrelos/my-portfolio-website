@@ -86,36 +86,45 @@ const Contact = () => {
         </div>
         {/*END*/}
         <form action="">
-        <motion.input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required
-            initial={{ scale: 0 }}
-            animate={isVisible ? {scale: 1 } : { scale: 0 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0}} 
-            className='animate-Contact'
-          />
-          <motion.input
+        <motion.div
+         initial={{ scale: 0 }}
+         animate={isVisible ? {scale: 1 } : { scale: 0 }}
+         transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0}} 
+         className='animate-Contact'
+        >
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+              />
+          </motion.div>
+        <motion.div
+         initial={{ scale: 0 }}
+         animate={isVisible ? {scale: 1 } : { scale: 0 }}
+         transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2}} 
+         className='animate-Contact'
+        >
+          <input
             type="email"
             name="email"
             placeholder="Email"
             required
-            initial={{ scale: 0 }}
-            animate={isVisible ? {scale: 1 } : { scale: 0 }} 
-            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2}} 
-            className='animate-Contact'
           />
-          <motion.textarea
-            name="message"
-            rows="7"
-            placeholder="Message"
-            required
+          </motion.div>
+          <motion.div
             initial={{ scale: 0 }}
             animate={isVisible ? {scale: 1 } : { scale: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.4}} 
             className='animate-Contact'
+          >
+          <textarea
+            name="message"
+            rows="7"
+            placeholder="Message"
+            required
           />
+          </motion.div>
           <motion.button href="mailto:relos1203@gmail.com" target="blank" type='submit' className='btn btn-primary'
             whileHover={{ scale: 1.2 }}
             onHoverStart={e => {}}
