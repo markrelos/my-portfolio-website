@@ -31,7 +31,7 @@ const Experience = () => {
   }, []);
 
   return (   
-    <section id= 'experience'>      
+    <section id= 'experience'>            
       <div id="exp__header">
         {sentence.map((letter, index) => {
           return(
@@ -41,13 +41,14 @@ const Experience = () => {
           )
         })}
         </div>
+        
       <div className="container experience__container">
       <motion.div className="animate"
               initial={{ scale: 0 }}
               animate={isVisible ? {scale: 1 } : { scale: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20}}
       >
-              <div className='eWrapper'>
+              <article>
                 <h3>Frontend Development</h3>
                 <div className="experience__content">
                       <article className='experience__details'>
@@ -93,14 +94,14 @@ const Experience = () => {
                         </div>
                       </article>
                   </div>
-                  </div>
+                  </article>
           </motion.div>
           {/* END OF FRONTEND */}
         <motion.div className="animate"
                 initial={{scale: 0 }}
                 animate={isVisible ? {scale: 1 } : { scale: 0 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}>
-            <div className='feWrapper'>
+            <article>
             <h3>Backend Development</h3>
               <div className="experience__content">
                 <article className='experience__details'>
@@ -139,7 +140,7 @@ const Experience = () => {
                 </div>
                 </article>
               </div>
-            </div>
+            </article>
         </motion.div>
       </div>
     </section>
