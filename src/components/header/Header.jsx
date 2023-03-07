@@ -10,6 +10,7 @@ const sentence = ["Hi,", "I'm", "Mark Relos"];
 const Header = () => {
 
   return (
+    <section id="home">
     <header className="fade-in">
       <div className="container header__container">
         <div className="letter-container">    
@@ -28,6 +29,7 @@ const Header = () => {
         <a href="#contact" className='scroll__down'>Scroll Down</a>
       </div>
     </header>
+    </section>
   )
   
 }
