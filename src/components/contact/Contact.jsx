@@ -53,36 +53,43 @@ const Contact = () => {
 
       <div className="container contact__container">
         <div className="contact__options">
-          <motion.article className="animate-Contact contact__option"
+          <motion.div className="animate-Contact" 
             initial={{ scale: 0 }}
             animate={isVisible ? {scale: 1 } : { scale: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20}}
           >
-            <MdOutlineEmail className='contact__option-icon'/>
-            <h4>Email</h4>
-            <h5>relos1203@gmail.com</h5>
-            <a href="mailto:relos1203@gmail.com" target="blank">Send a Message</a>
-          </motion.article>
-          <motion.article className="animate-Contact contact__option"
-           initial={{ scale: 0 }}
-           animate={isVisible ? {scale: 1 } : { scale: 0 }}
-           transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2}}
-          >
-            <RiMessengerLine className='contact__option-icon'/>
-            <h4>Messenger</h4>
-            <h5>Facebook: Mark Relos</h5>
-            <a href="https://m.me/markaldrin.relos" target="blank">Send a Message</a>
-          </motion.article>
-          <motion.article className="animate-Contact contact__option"
+              <article className="contact__option">
+                <MdOutlineEmail className='contact__option-icon'/>
+                <h4>Email</h4>
+                <h5>relos1203@gmail.com</h5>
+                <a href="mailto:relos1203@gmail.com" target="blank">Send a Message</a>
+              </article>
+          </motion.div>
+          <motion.div className="animate-Contact"
             initial={{ scale: 0 }}
             animate={isVisible ? {scale: 1 } : { scale: 0 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.4}} 
+            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2}}
           >
-            <MdOutlineEmail className='contact__option-icon'/>
-            <h4>Telegram</h4>
-            <h5>@markrelos</h5>
-            <a href="https://t.me/<@markrelos>" target="_blank">Send a Message</a>
-          </motion.article>
+              <article className="contact__option">
+                <RiMessengerLine className='contact__option-icon'/>
+                <h4>Messenger</h4>
+                <h5>Facebook: Mark Relos</h5>
+                <a href="https://m.me/markaldrin.relos" target="blank">Send a Message</a>
+              </article>
+          </motion.div>
+          <motion.div className="animate-Contact"
+            initial={{ scale: 0 }}
+            animate={isVisible ? {scale: 1 } : { scale: 0 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.4}}
+          >
+              <article className="contact__option"
+              >
+                <MdOutlineEmail className='contact__option-icon'/>
+                <h4>Telegram</h4>
+                <h5>@markrelos</h5>
+                <a href="https://t.me/<@markrelos>" target="_blank">Send a Message</a>
+              </article>
+          </motion.div>
         </div>
         {/*END*/}
         <form action="">
