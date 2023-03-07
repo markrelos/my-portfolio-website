@@ -52,7 +52,7 @@ header {
     bottom: 3rem;   
 }
 
-.header__socials a {
+.social-icon {
     background: white;
     color: var(--color-primary);
     padding: 0.9rem;
@@ -63,7 +63,7 @@ header {
     box-shadow: 0 5px 4px rgba(0,0,0,0.5);
 }
 
-.header__socials a:hover{
+.social-icon:hover{
     color: #fff;
     transform: translate(0, -10px);
 }

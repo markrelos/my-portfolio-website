@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/portfolio1.jpg'
 import IMG2 from '../../assets/portfolio2.jpg'
@@ -7,6 +7,7 @@ import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.png'
 import IMG6 from '../../assets/portfolio6.jpg'
 import TextSpan3 from './TextSpan3'
+import { motion } from 'framer-motion'
 
 const sentence = "Work".split("");
 const data = [
@@ -36,6 +37,29 @@ const data = [
 ]
 
 const Portfolio = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      const sections = document.querySelectorAll('section');
+      let currentSection = null;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
+
+        if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
+          const element = section.querySelector('.portfolio__item');
+          setIsVisible(!!element);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section id= 'portfolio'>
       {/*<h5>My Recent Work</h5>
@@ -52,9 +76,13 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
        {
-        data.map(({id, image, title, github, demo}) => {
+        data.map(({id, image, title, github, demo}, index) => {
           return (
-            <article key={id} className='portfolio__item'>
+            <motion.article key={id} className='portfolio__item'
+                initial={{ scale: 0 }}
+                animate={isVisible ? {scale: 1 } : { scale: 0 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 20, delay: index * 0.2}}
+            >
             <div className="portfolio__item-image">
               <img src={image} alt={title} />
             </div>
@@ -63,7 +91,7 @@ const Portfolio = () => {
                 <a href={github} className='btn' target='_blank'>Github</a>
                 <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
               </div>
-          </article>
+          </motion.article>
           )
         })
        }

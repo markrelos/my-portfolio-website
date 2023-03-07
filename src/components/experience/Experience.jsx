@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 const sentence = "My Skills".split("");
 const Experience = () => {
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -97,7 +96,7 @@ const Experience = () => {
         <motion.div className="animate"
             initial={{scale: 0 }}
             animate={isVisible ? {scale: 1 } : { scale: 0 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.3 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}
         >
         <h3>Backend Development</h3>
           <div className="experience__content">

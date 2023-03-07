@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect}  from 'react'
 import './testimonials.css'
 import AVTR1 from '../../assets/avatar1.jpg'
 import AVTR2 from '../../assets/avatar2.jpg'
@@ -14,6 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { motion } from 'framer-motion'
 
 const data = [
     {
@@ -39,6 +40,29 @@ const data = [
 ]
 const sentence = "Testimonials".split("");
 const Testimonials = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      const sections = document.querySelectorAll('section');
+      let currentSection = null;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
+
+        if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
+          const element = section.querySelector('.animate_Testimonials');
+          setIsVisible(!!element);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section id= 'testimonials'>    
       {/*<h5>Review from Clients</h5>
@@ -52,6 +76,11 @@ const Testimonials = () => {
           )
         })}
       </div>
+      <motion.div className='animate_Testimonials'
+                initial={{ scale: 0 }}
+                animate={isVisible ? {scale: 1 } : { scale: 0 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2}}
+       >
       <Swiper className="container testimonials__container" 
       modules={[Pagination]} spaceBetween={40}
       slidesPerView={1}
@@ -61,18 +90,18 @@ const Testimonials = () => {
       {
           data.map(({avatar, name, review}, index) => {
             return (
-              <SwiperSlide key={index} className="testimonial">
-                <div className="client__avatar">
-                  <img src={avatar}/>
-                </div>
-                <h5 className='client__name'>{name}</h5>
-                  <small className='client__review'>{review}</small>
-              </SwiperSlide>
-
+                <SwiperSlide key={index} className="testimonial">
+                  <div className="client__avatar">
+                    <img src={avatar}/>
+                  </div>
+                  <h5 className='client__name'>{name}</h5>
+                    <small className='client__review'>{review}</small>
+                </SwiperSlide>
               )
             })   
         } 
       </Swiper>
+      </motion.div>
     </section>
   
   )
