@@ -8,8 +8,46 @@ import TextSpan from './TextSpan'
 
 const sentence = ["Hi,", "I'm", "Mark Relos"];
 const Header = () => {
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isOn, setIsOn] = useState(false);
+
+  useEffect(() => {
+    handleDarkMode();
+  }, [isOn]);
+
+  function handleDarkMode() {
+    setIsDarkMode(!isDarkMode);
+    const body = document.querySelector("body");
+    body.classList.toggle("dark-mode", isOn);
+  }
+  
+  const toggleSwitch = () => {
+    setIsOn(!isOn);
+  };
+
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30
+  };
+
   return (
     <section id="home">
+      <div className='switch_wrapper'>
+          <motion.div
+            className="switch"
+            data-isOn={isOn}
+            onClick={toggleSwitch}
+            layout
+            transition={spring}
+          >
+                <motion.div className="handle" layout transition={spring}/>
+          </motion.div>
+            <div className="image-container">
+                  <div className="image" />
+            </div>
+       </div>
     <header className="fade-in">
       <div className="container header__container">
         <div className="letter-container">    
@@ -28,7 +66,7 @@ const Header = () => {
                   </motion.div>
                 ))}
         </div>
-        <p className="text_light" alt="me"> Frontend / Mobile Game Developer </p>        
+        <p className='p_home' alt="me"> Frontend / Mobile Game Developer </p>        
         <HeaderSocials />
         <a href="#contact" className='scroll__down'>Scroll Down</a>
       </div>

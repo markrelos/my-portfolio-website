@@ -65,8 +65,6 @@ const Testimonials = () => {
 
   return (
     <section id= 'testimonials'>    
-      {/*<h5>Review from Clients</h5>
-      <h2>Testimonials</h2>*/}
       <div id="testi__header">
         {sentence.map((letter, index) => {
           return(

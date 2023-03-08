@@ -1,9 +1,92 @@
+.switch_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50px;
+    margin-top: 3rem;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 60px;
+    gap: 1rem;
+}
+
+.switch {
+    width: 60px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50px;
+    padding: 2px;
+    cursor: pointer;
+  }
+  
+  .switch[data-isOn="true"] {
+    justify-content: flex-end;
+    background-color: white;
+  }
+  
+  .handle {
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  .switch[data-isOn="true"] .handle {
+    background-color: black;
+  }
+
+  .image-container {
+    top: 2px;
+    right: 2px;
+    width: 26px;
+    height: 26px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url(../../../src/assets/lightmode.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .dark-mode .image {
+    background-image: url(../../../src/assets/darkmode.png);
+  }
+{/*}.switch {
+    width: 160px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .switch[data-isOn="true"] {
+    justify-content: flex-end;
+  }
+  
+  .handle {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40px;
+  }*/}
+  
 #home{
     margin-top:0rem;
 }
 header {
     height: 100vh;
-    padding-top: 15rem;
+    padding-top: 10rem;
     overflow: hidden;
 }
 
@@ -68,21 +151,6 @@ header {
     transform: translate(0, -10px);
 }
 
-.linkedIn:hover {
-    background: #0A66C2;
-}
-
-.gitHub:hover {
-    background: #131418;
-}
-.vercel:hover {
-    background: #000000;
-}
-
-.faceBook:hover {
-    background: #1877F2;
-}
-
 .header__socials::after {
     content: "";
     width: 1px;
@@ -90,7 +158,10 @@ header {
     background: var(--color-primary);
 }
 
-
+.p_home
+{
+    color: var(--color-bg-variant);
+}
 /* ============= Image ========== */
 
 /*.me {
@@ -137,7 +208,7 @@ header {
 @media screen and (max-width: 600px) {
     header {
         height: 140vh;
-        padding-top: 0;
+        padding-top: 5rem;
        }
        .header__container{
         padding-top: 10rem;
@@ -145,4 +216,28 @@ header {
     .header__socials, .scroll__down {
         display: none;
        }
+       .switch {
+        width: 40px;
+        height: 20px;
+        padding: 1px;
+      }
+    
+      .handle {
+        width: 18px;
+        height: 18px;
+      }
+      .image
+      {
+        width: 20px;
+        height: 20px;
+      }
+      .switch_wrapper
+      {
+        right: 0px;
+        align-items: center;
+      }
+      .p_home
+      {
+        font-size: 0.5rem;
+      }
 }

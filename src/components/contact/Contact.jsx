@@ -132,11 +132,18 @@ const Contact = () => {
             required
           />
           </motion.div>
-          <motion.button href="mailto:relos1203@gmail.com" target="blank" type='submit' className='btn btn-primary'
-            whileHover={{ scale: 1.2 }}
+          <motion.button
+            className='btn-submit'
+            target="blank" 
+            type='submit'
+            whileHover={{ scale: 1.2, backgroundColor: 'transparent', border: '1px solid var(--color-primary)' }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-          >Send Message</motion.button>
+          >
+            <p className='text-light'
+            >Send Message
+            </p>
+          </motion.button>
         </form>
       </div>
     </section>

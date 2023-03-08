@@ -15,7 +15,7 @@
 }
 
 .portfolio__item {
-    background: var(--color-bg-variant);
+    background: var(--color-primary);
     padding: 1.2rem;
     border-radius: 2rem;
     border: 1px solid transparent;
@@ -40,6 +40,8 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 

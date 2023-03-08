@@ -64,6 +64,21 @@ input, textarea {
     color: var(--color-white);
 }
 
+::placeholder{
+    color: var(--color-white);
+    opacity: 0.4;
+}
+
+.btn-submit {
+    width: max-content;
+    display: inline-block;
+    background-color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    border-color: transparent; 
+
+}
 /* =================== MEDIA QUERIES (MEDIUM DEVICES) =================== */
 
 @media screen and (max-width: 1024px) {
