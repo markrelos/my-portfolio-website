@@ -5,7 +5,8 @@
 }
  #experience span {
     margin-top: 3rem;
-    font-size: 5rem; 
+    font-size: 5rem;
+    color: var(--color-dark-mode); 
  }
 
 .experience__container {

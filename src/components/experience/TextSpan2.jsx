@@ -23,7 +23,7 @@ const TextSpan2 = ({children}) => {
     }
     
     const resetColor = () => {controls.start({
-        color: "#ffffff",
+        color: "var(--color-dark-mode)",
         transition: {
           duration: 0.5,
         },
