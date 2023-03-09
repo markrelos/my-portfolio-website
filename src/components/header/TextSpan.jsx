@@ -23,14 +23,19 @@ const TextSpan = ({children}) => {
     }
     
     const resetColor = () => {controls.start({
-        color: "#ffffff",
+        color: "var(--color-dark-mode)",
         transition: {
           duration: 0.5,
         },
       });
       setIsPlaying(false);
       };
-    
+
+      useEffect(() => {
+        rubberBand();
+    }, []);
+
+            
     return(
 
         <motion.span  className="text-span"
@@ -39,7 +44,6 @@ const TextSpan = ({children}) => {
             if(!isPlaying)
                 rubberBand();
         }}
-        /*onAnimationComplete={() => setIsPlaying(false)}*/
         onAnimationComplete={resetColor}
         >
             {children}

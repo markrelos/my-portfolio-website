@@ -15,9 +15,11 @@
     --color-bg: #EAFDFC;
     --color-bg-variant: #BFEAF5;
     --color-primary: #82AAE3;
-    --color-primary-variant: #91D8E4;
+    --color-primary-variant: #000000;
     --color-white: #ffffff;
     --color-light: #a9a2c0;
+    --color-bg-btn: #808080;
+    --color-dark-mode: #000000;
         
     --transition: all 400ms ease;
 
@@ -115,7 +117,7 @@ a:hover {
 }
 
 .btn-primary {
-    background: #808080;
+    background: var(--color-bg-btn);
     color: var(--color-bg);
 }
 

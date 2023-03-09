@@ -46,7 +46,7 @@ const Experience = () => {
             <motion.div className="exp_panel"
                     initial={{ scale: 0 }}
                     animate={isVisible ? {scale: 1 } : { scale: 0 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 20}}
+                    transition={{ duration: 0.2}}
             >
                     <article>
                       <h3>Frontend Development</h3>
@@ -98,9 +98,9 @@ const Experience = () => {
                 </motion.div>
           {/* END OF FRONTEND */}
             <motion.div className="exp_panel"
-                    initial={{scale: 0 }}
-                    animate={isVisible ? {scale: 1 } : { scale: 0 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}>
+                     initial={{ scale: 0 }}
+                     animate={isVisible ? {scale: 1 } : { scale: 0 }}
+                     transition={{ duration: 0.2}}>
                 <article>
                 <h3>Backend Development</h3>
                   <div className="experience__content">

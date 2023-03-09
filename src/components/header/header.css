@@ -8,7 +8,8 @@
     transform: translateY(-50%);
     width: 150px;
     height: 60px;
-    gap: 1rem;
+    gap: 0.2rem;
+    z-index: 9999;
 }
 
 .switch {
@@ -58,35 +59,23 @@
   
   .dark-mode .image {
     background-image: url(../../../src/assets/darkmode.png);
-  }
-{/*}.switch {
-    width: 160px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.4);
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 50px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .switch[data-isOn="true"] {
-    justify-content: flex-end;
-  }
-  
-  .handle {
-    width: 80px;
-    height: 80px;
     background-color: white;
-    border-radius: 40px;
-  }*/}
+
+  }
+
+  :root.dark-mode{
+    --color-primary: #808080;
+    --color-bg-btn: #000000;
+    --color-primary-variant: #82AAE3;
+    --color-dark-mode: #ffffff;
+  }
   
 #home{
     margin-top:0rem;
 }
 header {
     height: 100vh;
-    padding-top: 10rem;
+    padding-top: 15rem;
     overflow: hidden;
 }
 
@@ -94,6 +83,10 @@ header {
     text-align: center;
     height: 100%;
     position: relative;
+}
+
+.text-span{
+  color: var(--color-dark-mode);
 }
 /* ============= Span ========== */
 .letter-container{
@@ -160,22 +153,10 @@ header {
 
 .p_home
 {
-    color: var(--color-bg-variant);
+    color: var(--color-primary-variant);
+        font-weight: 300;
+    font-size: 0.9rem;
 }
-/* ============= Image ========== */
-
-/*.me {
-    background: linear-gradient(var(--color-primary), transparent);
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
-}*/
-
 
 /* ============= Scroll Down ========== */
 
@@ -208,7 +189,7 @@ header {
 @media screen and (max-width: 600px) {
     header {
         height: 140vh;
-        padding-top: 5rem;
+        padding-top: 2rem;
        }
        .header__container{
         padding-top: 10rem;
@@ -217,22 +198,25 @@ header {
         display: none;
        }
        .switch {
-        width: 40px;
-        height: 20px;
+        width: 35px;
+        height: 18px;
         padding: 1px;
       }
     
       .handle {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
       }
       .image
       {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
       }
       .switch_wrapper
       {
+        margin-top: 20px;
+        width: 60px;
+        height: 50px;
         right: 0px;
         align-items: center;
       }

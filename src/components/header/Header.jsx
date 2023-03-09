@@ -1,7 +1,5 @@
 import React, { useEffect, useState} from 'react'
 import './header.css'
-import CTA from './CTA'
-import ME from '../../assets/me.png'
 import HeaderSocials from './HeaderSocials'
 import { motion } from "framer-motion"
 import TextSpan from './TextSpan'
@@ -20,6 +18,8 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
     const body = document.querySelector("body");
     body.classList.toggle("dark-mode", isOn);
+    const root = document.documentElement;
+    root.classList.toggle("dark-mode", isOn);
   }
   
   const toggleSwitch = () => {
@@ -31,6 +31,35 @@ const Header = () => {
     stiffness: 700,
     damping: 30
   };
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      const sections = document.querySelectorAll('section');
+      let currentSection = null;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
+
+        if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
+          const element = section.querySelector('.animate-Header');
+          setIsVisible(!element);
+        } else if (currentPosition < sections[0].offsetTop - 200) {
+          const element = section.querySelector('.animate-Header');
+          setIsVisible(!!element); // At the top of the page
+        } else if (index === sections.length - 1 && currentPosition >= sectionTop + sectionHeight) {
+          const element = section.querySelector('.animate-Header');
+          setIsVisible(!!element);// At the bottom of the page
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section id="home">
@@ -54,9 +83,9 @@ const Header = () => {
                 {sentence.map((word, wordIndex) => (
                   <motion.div className='animate_Header' 
                   key={wordIndex}
-                  initial={{ y: '60vw', opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: wordIndex * 0.5, duration: 0.8, ease: 'easeOut' }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: wordIndex * 0.3, duration: 0.5, ease: 'easeOut' }}
                   >
                     {word.split("").map((letter, letterIndex) => (
                       <TextSpan key={letterIndex}>
