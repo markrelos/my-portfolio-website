@@ -89,14 +89,23 @@ const Header = () => {
                       animate={{
                         opacity: 1,
                         x: 0,
-                        transitionEnd: { filter: 'none' },
-                      }}
-                      transition={{
-                        type: 'spring',
-                        damping: 10,
-                        stiffness: 100,
-                        duration: 0.5,
-                        delay: wordIndex * 0.4 + letterIndex * 0.1,
+                        transform: [
+                          "scale3d(1, 1, 1)",
+                          "scale3d(1.4, .55, 1)",
+                          "scale3d(.75, 1.25, 1)",
+                          "scale3d(1.25, .85, 1)",
+                          "scale3d(.9, 1.05, 1)",
+                          "scale3d(1, 1, 1)",
+                        ],
+                        color: "#82AAE3",
+                        transition: {
+                          times: [0, 0.4, 0.6, 0.7, 0.8, 0.9],
+                          type: "spring",
+                          damping: 10,
+                          stiffness: 100,
+                          duration: 0.5,
+                          delay: wordIndex * 0.4 + letterIndex * 0.1,
+                        },
                       }}
                       > 
                           <TextSpan key={letterIndex}>

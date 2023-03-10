@@ -14,7 +14,7 @@ const TextSpan5 = ({children}) => {
             "scale3d(.9, 1.05, 1)",
             "scale3d(1, 1, 1)",
         ],
-        color: "#82AAE3",
+        color: "#FCE22A",
         transition: {
             times: [0, .4, .6, .7, .8, .9],
         },
