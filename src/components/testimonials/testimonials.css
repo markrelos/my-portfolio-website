@@ -6,6 +6,7 @@
  #testimonials span {
     margin-top: 3rem;
     font-size: 5rem; 
+    color: var(--color-dark-mode);
  }
 
 
@@ -22,11 +23,11 @@
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto 1rem;
-    border: 0.4rem solid var(--color-primary-variant);
+    border: 0.4rem solid var(--color-bg);
 }
 
 .testimonial {
-    background: var(--color-light);
+    background: var(--color-primary);
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
@@ -42,7 +43,7 @@
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
-    background: var(--color-primary-variant);
+    background: var(--color-bg);
 }
 
 @media screen and (max-width: 1024px) {

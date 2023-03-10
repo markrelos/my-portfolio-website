@@ -68,6 +68,7 @@
     --color-bg-btn: #000000;
     --color-primary-variant: #82AAE3;
     --color-dark-mode: #ffffff;
+    --color-nav-darkmode: rgba(235, 222, 222, 0.295);
   }
   
 #home{
@@ -186,6 +187,9 @@ header {
    .text-span{
     font-size: 8vh;
    }
+   .switch_wrapper{
+    right: 0px;
+   }
 } 
 
 /* =================== MEDIA QUERIES (SMALLDEVICES) =================== */
@@ -215,14 +219,22 @@ header {
       {
         width: 18px;
         height: 18px;
+        
+      }
+      .image-container{
+        align-items: center;
+        justify-content: center;
+        transform: translateY(3.5px);
       }
       .switch_wrapper
       {
+        display: flex;
         margin-top: 20px;
         width: 60px;
         height: 50px;
         right: 0px;
         align-items: center;
+        justify-content: center;
       }
       .p_home
       {
