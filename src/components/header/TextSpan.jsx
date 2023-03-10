@@ -31,9 +31,6 @@ const TextSpan = ({children}) => {
       setIsPlaying(false);
       };
 
-      useEffect(() => {
-        rubberBand();
-    }, []);
 
             
     return(

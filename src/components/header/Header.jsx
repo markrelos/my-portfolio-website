@@ -81,18 +81,31 @@ const Header = () => {
       <div className="container header__container">
         <div className="letter-container">    
                 {sentence.map((word, wordIndex) => (
-                  <motion.div className='animate_Header' 
-                  key={wordIndex}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: wordIndex * 0.3, duration: 0.5, ease: 'easeOut' }}
-                  >
+                  <div>
                     {word.split("").map((letter, letterIndex) => (
-                      <TextSpan key={letterIndex}>
-                        {letter === ' ' ? '\u00A0' : letter}
-                      </TextSpan>
+                      <motion.div  className='animate_Header'
+                      key={letterIndex}
+                      initial={{ opacity: 0, x: 0 }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                        transitionEnd: { filter: 'none' },
+                      }}
+                      transition={{
+                        type: 'spring',
+                        damping: 10,
+                        stiffness: 100,
+                        duration: 0.5,
+                        delay: wordIndex * 0.4 + letterIndex * 0.1,
+                      }}
+                      > 
+                          <TextSpan key={letterIndex}>
+                            {letter === ' ' ? '\u00A0' : letter}
+                          </TextSpan>
+                      </motion.div>
                     ))}
-                  </motion.div>
+
+                  </div>
                 ))}
         </div>
         <p className='p_home' alt="me"> Frontend / Mobile Game Developer </p>        

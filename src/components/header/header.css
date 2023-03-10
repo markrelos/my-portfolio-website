@@ -169,6 +169,10 @@ header {
     font-size: 0.9rem;
 }
 
+.animate_Header{
+  display: inline-block;
+}
+
 /* =================== MEDIA QUERIES (MEDIUM DEVICES) =================== */
 
 @media screen and (max-width: 1024px) {
