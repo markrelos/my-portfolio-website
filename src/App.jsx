@@ -9,20 +9,20 @@ import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
+
 const App = () => {
 
   return (
+
        <>
         <Header />
         <Nav />
-        {/*<About />*/}
         <Experience />
-        {/*<Services />*/}
-        <Portfolio />
-        <Testimonials />
+        {/*<Portfolio />*/}
+        {/*<Testimonials />*/}
         <Contact />
-        {/*<Footer />*/}
        </>
+ 
   )
 }
 

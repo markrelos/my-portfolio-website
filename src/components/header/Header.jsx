@@ -7,6 +7,7 @@ import TextSpan from './TextSpan'
 const sentence = ["Hi,", "I'm", "Mark Relos"];
 const Header = () => {
 
+
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOn, setIsOn] = useState(false);
 
@@ -63,7 +64,7 @@ const Header = () => {
 
   return (
     <section id="home">
-      <div className='switch_wrapper'>
+            <div className='switch_wrapper'>
           <motion.div
             className="switch"
             data-isOn={isOn}
@@ -117,7 +118,7 @@ const Header = () => {
                   </div>
                 ))}
         </div>
-        <p className='p_home' alt="me"> Frontend / Mobile Game Developer </p>        
+        <p className='p_home' alt="me"> Web / Web3 / Game Developer </p>        
         <HeaderSocials />
         <a href="#contact" className='scroll__down'>Scroll Down</a>
       </div>

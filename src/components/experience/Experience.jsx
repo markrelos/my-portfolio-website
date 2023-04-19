@@ -43,18 +43,17 @@ const Experience = () => {
       </div>
         
       <div className="container experience__container">
-            <motion.div className="exp_panel"
-                    initial={{ scale: 0 }}
-                    animate={isVisible ? {scale: 1 } : { scale: 0 }}
-                    transition={{ duration: 0.2}}
-            >
+      <motion.div className="exp_panel"
+                     initial={{ scale: 0 }}
+                     animate={isVisible ? {scale: 1 } : { scale: 0 }}
+                     transition={{ duration: 0.2}}>
                     <article>
                       <h3>Frontend Development</h3>
                       <div className="experience__content">
                             <article className='experience__details'>
                               <BsPatchCheckFill className='experience__details-icon' />
                               <div>
-                              <h4>HTML</h4>
+                              <h4>Solidity</h4>
                               <small className='text-light'>Experienced</small>
                               </div>
                             </article>
@@ -62,7 +61,7 @@ const Experience = () => {
                               <BsPatchCheckFill className='experience__details-icon'/>
                             <div>
                             <h4>CSS</h4>
-                              <small className='text-light'>Intermediate</small>
+                              <small className='text-light'>Experienced</small>
                             </div>
                             </article>
                             <article className='experience__details'>
@@ -90,7 +89,7 @@ const Experience = () => {
                               <BsPatchCheckFill className='experience__details-icon'/>
                               <div>
                               <h4>React</h4>
-                              <small className='text-light'>Experienced</small>
+                              <small className='text-light'>Intermediate</small>
                               </div>
                             </article>
                         </div>
@@ -108,36 +107,75 @@ const Experience = () => {
                       <BsPatchCheckFill className='experience__details-icon'/>
                       <div>
                       <h4>Node JS</h4>
-                      <small className='text-light'>Experienced</small>
+                      <small className='text-light'>Knowledgeable</small>
                       </div>
                     </article>
                     <article className='experience__details'>
                       <BsPatchCheckFill className='experience__details-icon'/>
                       <div>
                       <h4>MongoDB</h4>
-                      <small className='text-light'>Intermediate</small>
+                      <small className='text-light'>Experienced</small>
                       </div>
                     </article>
                     <article className='experience__details'>
                       <BsPatchCheckFill className='experience__details-icon'/>
                       <div>
                       <h4>PHP</h4>
-                      <small className='text-light'>Intermediate</small>
+                      <small className='text-light'>Experienced</small>
                       </div>
                     </article>
                     <article className='experience__details'>
                       <BsPatchCheckFill className='experience__details-icon'/>
                       <div>
                       <h4>MySQL</h4>
+                      <small className='text-light'>Experienced</small>
+                      </div>
+                    </article>
+                    {/*<article className='experience__details'>
+                      <BsPatchCheckFill className='experience__details-icon'/>
+                    <div>
+                      <h4>Python</h4>
+                      <small className='text-light'>Experienced</small>
+                      </div>
+                    </article>*/}
+                  </div>
+                </article>
+            </motion.div>
+
+            <motion.div className="exp_panel"
+                     initial={{ scale: 0 }}
+                     animate={isVisible ? {scale: 1 } : { scale: 0 }}
+                     transition={{ duration: 0.2}}>
+                <article>
+                <h3>Game Development</h3>
+                  <div className="experience__content">
+                    <article className='experience__details'>
+                      <BsPatchCheckFill className='experience__details-icon'/>
+                      <div>
+                      <h4>Unity</h4>
                       <small className='text-light'>Intermediate</small>
                       </div>
                     </article>
                     <article className='experience__details'>
                       <BsPatchCheckFill className='experience__details-icon'/>
-                    <div>
-                      <h4>Python</h4>
+                      <div>
+                      <h4>Unreal Engine</h4>
                       <small className='text-light'>Experienced</small>
-                    </div>
+                      </div>
+                    </article>
+                    <article className='experience__details'>
+                      <BsPatchCheckFill className='experience__details-icon'/>
+                      <div>
+                      <h4>Blender</h4>
+                      <small className='text-light'>Experienced</small>
+                      </div>
+                    </article>
+                    <article className='experience__details'>
+                      <BsPatchCheckFill className='experience__details-icon'/>
+                      <div>
+                      <h4>Maya</h4>
+                      <small className='text-light'>Knowledgeable</small>
+                      </div>
                     </article>
                   </div>
                 </article>

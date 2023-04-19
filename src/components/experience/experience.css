@@ -11,7 +11,7 @@
 
 .experience__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 .exp_panel {
@@ -21,6 +21,7 @@
     border: 1px solid transparent;
     transition: var(--transition);
 }
+
 .exp_panel:hover {
     background: transparent;
     border-color: var(--color-primary);

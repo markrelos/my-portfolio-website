@@ -48,8 +48,8 @@ const Nav = () => {
     <nav className='container__nav'> 
         <a href="#home" onClick={() => handleClick('#home')} className={activeNav === '#home' ? 'active' : ''}><AiOutlineHome/></a>
         <a href="#experience" onClick={() => handleClick('#experience')} className={activeNav === '#experience' ? 'active' : ''}><BiBook/></a>
-        <a href="#portfolio" onClick={() => handleClick('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''}><MdWorkOutline/></a>
-        <a href="#testimonials" onClick={() => handleClick('#testimonials')} className={activeNav === '#testimonials' ? 'active' : ''}><BsChatSquareText/></a>
+        {/*<a href="#portfolio" onClick={() => handleClick('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''}><MdWorkOutline/></a>*/}
+        {/*<a href="#testimonials" onClick={() => handleClick('#testimonials')} className={activeNav === '#testimonials' ? 'active' : ''}><BsChatSquareText/></a>*/}  
         <a href="#contact" onClick={() => handleClick('#contact')} className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail/></a>
     </nav>
   )

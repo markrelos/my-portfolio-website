@@ -50,8 +50,9 @@ body.dark-mode {
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/Black.png)
+    background-image: url(../src/assets/Black.png);
   }
+
 /* ============== GENERAL STYLES =========== */
 
 .container {
